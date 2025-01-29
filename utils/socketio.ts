@@ -6,8 +6,7 @@ let socket: Socket | null = null;
 
 export const initializeSocket = async () => {
   if (!socket) {
-    await fetch("/api/socket"); // First initialize the server-side Socket.IO
-    socket = io();
+    socket = io(); // Update with your server URL
   }
   return socket;
 };
